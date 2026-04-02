@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: "StudyEdge Dashboard",
-  description: "CAPS-aligned learner dashboard for StudyEdge",
+  title: "StudyEdge Portal",
+  description: "CAPS-aligned learner portal for StudyEdge",
 };
 
 export default function RootLayout({
@@ -12,8 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
