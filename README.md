@@ -1,16 +1,23 @@
-# StudyEdge Dashboard
+# StudyEdge Portal with Clerk Login
 
-A clean Next.js + Tailwind starter dashboard for StudyEdge, ready for GitHub and Vercel.
+This is the StudyEdge portal with Clerk authentication added.
 
-## Run locally
+## Local setup
 
-```bash
-npm install
-npm run dev
-```
+1. Install packages:
+   npm install
 
-Open http://localhost:3000
+2. Copy `.env.example` to `.env.local`
 
-## Deploy
+3. Add your Clerk keys
 
-Push this folder to GitHub, then import the repo into Vercel.
+4. Run:
+   npm run dev
+
+## Vercel setup
+
+Add these environment variables in Vercel:
+- NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+- CLERK_SECRET_KEY
+
+Then redeploy.
